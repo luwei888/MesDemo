@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebDemoUI.Models;
 
@@ -10,8 +11,16 @@ namespace WebDemoUI.Controllers
 {
     public class HomeController : Controller
     {
+        private IHttpContextAccessor _accessor;
+
+        public  HomeController(IHttpContextAccessor accessor)
+        {
+            _accessor = accessor;
+        }
+
         public IActionResult login()
         {
+            var httpContext = _accessor.HttpContext;
             return View();
         }
 
