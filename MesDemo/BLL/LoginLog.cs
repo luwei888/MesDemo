@@ -20,8 +20,9 @@ namespace MesDemo.BLL
         //    dal = ZGZY.DALFactory.Factory.GetLoginInfoDALs();
         //}
 
-        //方法二
-        private static readonly MesDemo.IDAL.ILoginLog dal = 
+        //方法二:初始化的时候直接赋值
+        private static readonly MesDemo.IDAL.ILoginLog dal = MesDemo.DALFactory.Factory.GetLoginInfoDAL();
 
+        public string GetPaper(string strWhere,string )
     }
 }

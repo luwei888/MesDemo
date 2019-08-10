@@ -51,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DALFactory\DALFactory.csproj">
+      <Project>{2a5f341f-1699-427c-9717-351e5e77c86a}</Project>
+      <Name>DALFactory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IDAL\IDAL.csproj">
       <Project>{b6f5a600-4428-4519-b0cd-d0c47ec7424b}</Project>
       <Name>IDAL</Name>
